@@ -14,6 +14,7 @@ public class PublicKeyLoader {
 		byte[] publicKeyBytes = extractPublicKeyBytes(publicKeyString);
 		X509EncodedKeySpec spec = new X509EncodedKeySpec(publicKeyBytes);
 		KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+		System.out.println(keyFactory);
 		return (RSAPublicKey) keyFactory.generatePublic(spec);
 	}
 
